@@ -17,7 +17,7 @@ public class EnemyDropScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DropEnergy();
+        // DropEnergy();
     }
 
     void DropEnergy()
