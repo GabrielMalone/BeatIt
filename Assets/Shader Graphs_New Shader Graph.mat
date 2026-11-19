@@ -28,7 +28,7 @@ Material:
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
@@ -57,10 +57,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _alpha: 0.7
-    - _galaxySpeed: 1.001236
-    - _gradientNoise: 1.0077944
+    - _alpha: 2.2817943
+    - _galaxySpeed: 1.0062028
+    - _gradientNoise: 1.1792231
     m_Colors:
-    - _OffsetXY: {r: 0.608267, g: 0.608267, b: 0, a: 0}
+    - _OffsetXY: {r: 10.184555, g: 1.1845553, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
