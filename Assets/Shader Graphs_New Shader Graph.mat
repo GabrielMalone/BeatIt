@@ -57,10 +57,10 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _alpha: 2.2817943
-    - _galaxySpeed: 1.0062028
-    - _gradientNoise: 1.1792231
+    - _alpha: 1.7296264
+    - _galaxySpeed: 1.0012718
+    - _gradientNoise: 0.54150873
     m_Colors:
-    - _OffsetXY: {r: 10.184555, g: 1.1845553, b: 0, a: 0}
+    - _OffsetXY: {r: 1.3585063, g: 1.3585063, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

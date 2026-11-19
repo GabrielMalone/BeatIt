@@ -3309,16 +3309,16 @@ MonoBehaviour:
   galaxyShaderMat: {fileID: 2100000, guid: 0a540e8a905c846a6bbebc6f7ea0e1ea, type: 2}
   galaxySpeed: 1
   audioAnalyzer: {fileID: 1638619942}
-  gradientPulse: 1
+  gradientPulse: 0.1
   gradientMultiplier: 0.5
   beatSizeMultiplier: 0.5
   gradientReturnSpeed: 1
-  offSetpulseX: 10
+  offSetpulseX: 1
   offSetpulseY: 1
   offsetMultiplier: 1
   offsetReturnSpeed: 1
-  alpha: 0.5
-  alphaMultiplier: 5
+  alpha: 1
+  alphaMultiplier: 3
   speedMultiplier: 1
 --- !u!1 &1101491966
 GameObject:
