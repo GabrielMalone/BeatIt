@@ -190,7 +190,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.03551086, g: 0.080953024, b: 0.13207549, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -567,10 +567,10 @@ MonoBehaviour:
   analyzer: {fileID: 1638619942}
   chaffe: {fileID: 2620938665220606343, guid: 2b510ef42a35849959b779cfe4b32f18, type: 3}
   shieldParticles: {fileID: 1928362450}
-  repulseRadius: 15
-  repulseForce: 1200
-  shieldRadius: 10
-  shielDdamage: 10
+  repulseRadius: 30
+  repulseForce: 2000
+  shieldRadius: 30
+  shielDdamage: 0
   shieldHitLines:
   - {fileID: 1900146420}
   - {fileID: 762435346}
@@ -3211,6 +3211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052002488}
   - component: {fileID: 1052002487}
+  - component: {fileID: 1052002489}
   m_Layer: 0
   m_Name: Galaxy
   m_TagString: Untagged
@@ -3293,6 +3294,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052002489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052002486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c93821ed671845799a69adfb7de84a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GalaxyScript
+  galaxyShaderMat: {fileID: 2100000, guid: 0a540e8a905c846a6bbebc6f7ea0e1ea, type: 2}
+  galaxySpeed: 1
+  audioAnalyzer: {fileID: 1638619942}
+  gradientPulse: 1
+  gradientMultiplier: 0.5
+  beatSizeMultiplier: 0.5
+  gradientReturnSpeed: 1
+  offSetpulse: 1
+  offsetMultiplier: 0.1
+  offsetReturnSpeed: 1
+  speedMultiplier: 1
 --- !u!1 &1101491966
 GameObject:
   m_ObjectHideFlags: 0

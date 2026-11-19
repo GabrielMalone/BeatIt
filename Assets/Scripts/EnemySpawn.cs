@@ -61,7 +61,7 @@ public class EnemySpawn : MonoBehaviour
         foreach (GameObject enemy in allEnemies)
         {
             EnemyBehavior eb = enemy.GetComponent<EnemyBehavior>();
-            int crowdSize = eb.getNumEnemiesInRange();
+            int crowdSize = eb.GetNumEnemiesInRange();
             if (crowdSize > maxCrowdSize)
             {
                 maxCrowdSize = crowdSize;

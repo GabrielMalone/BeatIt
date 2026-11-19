@@ -13,7 +13,6 @@ public class EnemyBehavior : MonoBehaviour
     public float maxSize = 2.0f;
 
 
-
     [Header("NavMesh Agility")]
     public float acceleration = 100f;
     public float turnSpeed = 720f;
@@ -106,7 +105,7 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
         enemyPower = enemyPowerBase;
-        agent.speed = analyzer.targetSpeed * 3;
+        agent.speed = analyzer.targetSpeed * (3  * Mathf.InverseLerp(0f, 0.5f, analyzer.volume));
         spriteRenderer.color = analyzer.currentColor;
         pulseOnBeat();
         glowOnTreble();
@@ -141,22 +140,17 @@ public class EnemyBehavior : MonoBehaviour
 
     void pulseOnBeat()
     {
-
         if (AudioAnalyzer.beatDetected)
         {
             sizePulse = beatSizeMultiplier;
         }
-
         sizePulse = Mathf.Lerp(
             sizePulse,
             1f,
             sizeReturnSpeed * Time.deltaTime
         );
-
-        transform.localScale = originalScale * sizePulse;
-
+        transform.localScale = originalScale *  (3 * Mathf.InverseLerp(0f, 0.5f, analyzer.volume));
         enemyPower = originalScale.x * sizePulse;
-
     }
 
     void glowOnTreble()
@@ -177,7 +171,7 @@ public class EnemyBehavior : MonoBehaviour
             glowSpeed * Time.deltaTime
         );
 
-        Color hdrColor = currentColor * currentGlow;
+        Color hdrColor = currentColor * currentGlow * (1.5f * Mathf.InverseLerp(0f, 0.5f, analyzer.volume));
 
 
         enemyBloomMaterial.SetColor("_Color", hdrColor);
@@ -185,7 +179,7 @@ public class EnemyBehavior : MonoBehaviour
     }
 
 
-    public int getNumEnemiesInRange()
+    public int GetNumEnemiesInRange()
     {
         return Physics2D.OverlapCircleNonAlloc(
             transform.position,
@@ -201,12 +195,7 @@ public class EnemyBehavior : MonoBehaviour
 
         crowdRadius = Random.Range(5f, 25f);
 
-        int count = Physics2D.OverlapCircleNonAlloc(
-            transform.position,
-            crowdRadius,
-            crowdBuffer,
-            enemyLayer
-        );
+        int count = GetNumEnemiesInRange();
 
         if (count <= crowded)
             return;
@@ -236,8 +225,6 @@ public class EnemyBehavior : MonoBehaviour
                 direction * repulseForce,
                 ForceMode2D.Impulse
             );
-
-            Debug.Log("IT'S TOO CROWDED IN HERE!@!");
 
             numRepulsed++;
 
